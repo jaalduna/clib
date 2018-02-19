@@ -29,4 +29,7 @@ complex mult_complex(complex n1, complex n2);
 /*add_complex add the complex numbers n1 and n2 and return it*/
 complex add_complex(complex n1, complex n2);
 
+/*abs_complex_squared calculates the squared absolute value of a complex number (real^2 + img^2)*/
+float abs_complex_squared (complex n1);
+
 
