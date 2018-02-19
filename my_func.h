@@ -1,5 +1,11 @@
 /*my_func.h*/
 
+typedef struct complex
+{
+    float real;
+    float imag;
+} complex;
+
 
 
 /*mean calculates the mean value of the first L registers in data and returns it*/
@@ -13,15 +19,6 @@ float var(int L, float mean_val, float data[]);
 
 /*sort arrange the first L registers in data in descending order and return them in sort_data*/
 void sort (int L, float data[], float sort_data[]);
-
-
-typedef struct complex
-{
-    float real;
-    float imag;
-} complex;
-
-
 
 /*mult_complex calculates the complex multiplication between n1 and n2 and return it*/
 complex mult_complex(complex n1, complex n2);
