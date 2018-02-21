@@ -12,7 +12,7 @@ typedef struct complex
 float mean(int L, float data[]);
 
 /*mean_weight calculates the weighted mean of the first L registers with weights given by weigth[] and returns it*/
-float mean_weigth(int L, float data[], float weigth[]);
+float mean_weight(int L, float data[], float weight[]);
 
 /*var calculates the variance of the first L registers in data and returns it*/
 float var(int L, float mean_val, float data[]);
