@@ -15,12 +15,12 @@ float mean(int L, float data[]){
 
 
 /*mean_weight calculates the weighted mean of the first L registers with weights given by weigth[] and returns it*/
-float mean_weigth(int L, float data[], float weigth[]){
+float mean_weight(int L, float data[], float weight[]){
     float ans=0;
     float total_weight=0;
     for(int i=0;i<L;i++){
-        ans+=data[i]*weigth[i];
-        total_weight+=weigth[i];
+        ans+=data[i]*weight[i];
+        total_weight+=weight[i];
     }
     return ans/total_weight;
 }
@@ -49,12 +49,12 @@ void quick_sort(float data[], int l, int r){
     int i=l+1;
     int j=r;
     while(i<=j){
-        if (data[i]<piv){
+        if (data[i]>piv){
             i++;
-            if(data[j]>=piv) j--;
+            if(data[j]<=piv) j--;
         }
         else{
-            if(data[j]<piv){
+            if(data[j]>piv){
                 swap(data,i,j);
                 i++;
             }
@@ -86,7 +86,7 @@ void sort (int L, float data[], float sort_data[]){
 }
 
 /*add_complex add the complex numbers n1 and n2 and return it*/
-complex add(complex n1, complex n2)
+complex add_complex(complex n1, complex n2)
 {
     complex temp;
 
